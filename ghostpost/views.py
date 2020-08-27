@@ -23,7 +23,7 @@ def roasts(request):
     note = "all Roasts!"
     return render(request, 'index.html', {'posts': posts, 'note': note})
 
-def addpost(request):
+def add_post(request):
     if request.method == 'POST':
         form = AddPostForm(request.POST)
         if form.is_valid():
